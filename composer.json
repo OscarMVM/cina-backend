@@ -71,6 +71,12 @@
             "chmod -R 755 storage",
             "php artisan package:discover"
         ],
+        "railway-build": [
+            "composer install --optimize-autoloader --no-dev --ignore-platform-reqs",
+            "php artisan config:cache",
+            "php artisan route:cache",
+            "php artisan view:cache"
+        ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
