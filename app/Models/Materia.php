@@ -23,8 +23,4 @@ class Materia extends Model
         'notas'
     ];
 
-    public function categoria()
-    {
-        return $this->belongsTo(Categoria::class, 'categoriaId');
-    }
 }
