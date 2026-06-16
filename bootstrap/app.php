@@ -12,7 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
                 return response()->json(['ok' => true]);
             });
 
-            Route::middleware('api')->prefix('api')->group(base_path('routes/api.php'));
+            require base_path('routes/api.php');
             Route::get('/up', function () {
                 return response('Application up', 200);
             })->name('health');
