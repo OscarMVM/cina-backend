@@ -1,5 +1,15 @@
 <?php
 
+if ($_SERVER['REQUEST_URI'] === '/debug') {
+    header('Content-Type: application/json');
+    echo json_encode([
+        'uri' => $_SERVER['REQUEST_URI'],
+        'script_name' => $_SERVER['SCRIPT_NAME'],
+        'php_self' => $_SERVER['PHP_SELF'],
+    ]);
+    exit;
+}
+
 if ($_SERVER['REQUEST_URI'] === '/favicon.ico') {
     http_response_code(204);
     exit;
