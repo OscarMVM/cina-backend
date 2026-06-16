@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Materia;
+use App\Models\Pasto;
 
-class MateriaController
+class PastoController
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $materias = Materia::all();
-        return response()->json($materias);
+        $pastos = Pasto::all();
+        return response()->json($pastos);
     }
 
     /**

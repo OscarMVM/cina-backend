@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Materia;
+use App\Models\Version;
 
-class MateriaController
+class VersionController
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $materias = Materia::all();
-        return response()->json($materias);
+        $versiones = Version::all();
+        return response()->json($versiones);
     }
 
     /**
