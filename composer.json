@@ -32,11 +32,6 @@
         }
     },
     "scripts": {
-        "vercel": [
-            "@php artisan package:discover --ansi",
-            "@php artisan config:cache",
-            "@php artisan route:cache"
-        ],
         "test": [
             "@php artisan config:clear --ansi",
             "@php artisan test"
@@ -58,7 +53,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "laravel/pail"
+            ]
         }
     },
     "config": {
